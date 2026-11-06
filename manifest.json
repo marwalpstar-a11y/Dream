@@ -1,0 +1,22 @@
+{
+  "name": "DREAMEXCH24 - Sports Exchange Desk",
+  "short_name": "DREAMEXCH24",
+  "description": "India's Most Trusted Cricket ID and Football ID Provider | Same Day Delivery Across India",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#080c16",
+  "theme_color": "#facc15",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

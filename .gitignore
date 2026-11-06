@@ -1,0 +1,29 @@
+# System & Tools
+tools/
+tools/*
+*.zip
+*.log
+
+# Temp download / analysis scripts
+analyze.php
+download_pages.php
+download_images.php
+extract_content.php
+dump_details.php
+dreamexch_raw.html
+page_*.html
+text_*.txt
+extracted_content.json
+
+# Backups & old portfolio files in root
+backup_pawanmarwal/
+backup_apple_leaves/
+matchexchonline/
+/Open-PawanMarwal.in.bat
+/server-pawanmarwal.ps1
+/Start-MatchExchOnline.bat
+/CNAME
+/projects.html
+/project-detail.html
+/styles.css
+/app.js
