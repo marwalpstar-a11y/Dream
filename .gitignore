@@ -4,6 +4,9 @@ tools/*
 *.zip
 *.log
 
+# Local utilities
+/Push-To-GitHub.bat
+
 # Temp download / analysis scripts
 analyze.php
 download_pages.php
