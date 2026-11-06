@@ -202,21 +202,32 @@ button, input, textarea, select {
   transition: transform var(--transition-normal), background var(--transition-normal);
 }
 
+.site-header .container {
+  max-width: 1560px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  gap: 16px;
+  width: 100%;
 }
 
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .site-logo img {
-  height: 42px;
+  height: 40px;
   width: auto;
   object-fit: contain;
 }
@@ -228,41 +239,53 @@ button, input, textarea, select {
 
 .site-logo-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--gold-400);
   line-height: 1;
+  white-space: nowrap;
 }
 
 .site-logo-tagline {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 8px;
+  gap: 6px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-muted);
-  padding: 8px 14px;
+  padding: 7px 11px;
   border-radius: 8px;
   transition: all var(--transition-fast);
   position: relative;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-decoration: none;
 }
 
 .nav-link:hover {
   color: var(--text-white);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .nav-link.active {
@@ -286,9 +309,10 @@ button, input, textarea, select {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
-/* WhatsApp "Get ID" Button in Header */
+/* WhatsApp Order Button in Header */
 .btn-whatsapp-header {
   display: inline-flex;
   align-items: center;
@@ -296,13 +320,15 @@ button, input, textarea, select {
   background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.875rem;
-  padding: 10px 18px;
+  font-size: 0.84rem;
+  padding: 9px 16px;
   border-radius: 9999px;
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all var(--transition-fast);
   white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .btn-whatsapp-header:hover {
@@ -313,8 +339,8 @@ button, input, textarea, select {
 }
 
 .btn-whatsapp-header svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
   flex-shrink: 0;
 }
@@ -516,36 +542,46 @@ button, input, textarea, select {
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.4vw, 3.35rem);
   font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 16px;
+  line-height: 1.2;
+  margin-bottom: 20px;
   color: var(--text-white);
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  text-transform: none;
 }
 
 .hero-title .highlight-gold {
   color: var(--gold-400);
-  text-shadow: 0 0 20px var(--gold-glow);
+  text-shadow: 0 0 24px rgba(250, 204, 21, 0.45);
+}
+
+.hero-title .hero-pipe {
+  color: var(--gold-400);
+  opacity: 0.7;
+  display: inline-block;
+  margin: 0 6px;
+  font-weight: 400;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
   font-weight: 700;
   color: #38bdf8;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .hero-description {
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
+  line-height: 1.65;
   color: var(--text-light);
   opacity: 0.95;
-  margin-bottom: 12px;
-  max-width: 620px;
+  margin-bottom: 24px;
+  max-width: 650px;
 }
 
 .hero-subdesc {
@@ -1407,6 +1443,39 @@ button, input, textarea, select {
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
+/* Intermediate Desktop Navigation (1081px - 1340px) */
+@media (max-width: 1340px) and (min-width: 1081px) {
+  .site-header .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .nav-menu {
+    gap: 3px;
+  }
+  .nav-link {
+    font-size: 0.8125rem;
+    padding: 6px 7px;
+  }
+  .btn-whatsapp-header {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+  .site-logo-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablet Navigation Switch (<= 1080px) */
+@media (max-width: 1080px) {
+  .nav-menu {
+    display: none !important;
+  }
+  .mobile-toggle {
+    display: flex !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
