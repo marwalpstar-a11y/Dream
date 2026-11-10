@@ -76,6 +76,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -84,6 +87,8 @@ body {
   color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
   position: relative;
   min-height: 100vh;
   background-image: 
@@ -349,6 +354,10 @@ button, input, textarea, select {
   height: 17px;
   fill: currentColor;
   flex-shrink: 0;
+}
+
+.wa-btn-text-mobile {
+  display: none;
 }
 
 /* Mobile Toggle Hamburger */
@@ -1507,61 +1516,479 @@ button, input, textarea, select {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 68px;
+    --header-height: 64px;
   }
   
   body {
     padding-bottom: var(--mobile-nav-height);
   }
   
-  .nav-menu {
-    display: none;
-  }
-  
-  .mobile-toggle {
-    display: flex;
-  }
-  
-  .mobile-bottom-bar {
-    display: flex;
-  }
-  
-  .floating-whatsapp span {
-    display: none;
-  }
-  
-  .floating-whatsapp {
-    padding: 14px;
-    border-radius: 50%;
-    bottom: calc(var(--mobile-nav-height) + 16px);
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
   
   .top-announcement {
     display: none;
   }
-  
-  .products-grid, .steps-grid, .standards-grid {
-    grid-template-columns: 1fr;
+
+  /* Header & Navigation */
+  .site-header {
+    height: var(--header-height);
   }
-  
-  .about-hero-grid, .contact-grid {
-    grid-template-columns: 1fr;
+  .site-header .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
-  
+  .nav-container {
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .nav-menu {
+    display: none !important;
+  }
+  .site-logo {
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .site-logo img {
+    height: 34px;
+    width: 34px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .site-logo-fallback {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .site-logo-title {
+    font-size: 1.15rem;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .site-logo-tagline {
+    font-size: 0.55rem;
+    white-space: nowrap;
+    letter-spacing: 0.06em;
+  }
+  .nav-actions {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .btn-whatsapp-header {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+  .btn-whatsapp-header svg {
+    width: 15px;
+    height: 15px;
+  }
+  .mobile-toggle {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 26px 0 40px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    width: 100%;
+    min-width: 0;
+  }
+  .hero-content {
+    width: 100%;
+    min-width: 0;
+  }
+  .hero-eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .badge-pill {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+  .hero-title {
+    font-size: clamp(1.4rem, 5.2vw, 1.95rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    letter-spacing: -0.01em;
+  }
+  .hero-title .hero-pipe {
+    display: none;
+  }
+  .hero-description {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    overflow-wrap: break-word;
+  }
+  .hero-trust-rating {
+    font-size: 0.78rem;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    border-radius: 9999px;
+    box-sizing: border-box;
+  }
+  .hero-visual-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+  .hero-visual-wrapper {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+  .hero-visual-image {
+    height: 220px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  /* Section 2: Stats Strip */
+  .section-stats-strip {
+    padding: 6px 0 24px;
+  }
+  .stats-strip-card {
+    grid-template-columns: 1fr;
+    padding: 14px 16px;
+    gap: 0;
+    border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 11px 4px;
+    width: 100%;
+    justify-content: flex-start;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+  .stat-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+  .stat-icon-wrap svg {
+    width: 20px;
+    height: 20px;
+  }
+  .stat-number {
+    font-size: 1.2rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    white-space: normal;
+  }
+
+  /* Section 3: Editorial Cricket ID */
+  .section-editorial {
+    padding: 40px 0;
+  }
+  .editorial-eyebrow {
+    font-size: 0.72rem;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  .editorial-heading {
+    font-size: clamp(1.35rem, 5.2vw, 1.9rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+    overflow-wrap: break-word;
+  }
+  .editorial-paragraph {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 22px;
+    overflow-wrap: break-word;
+  }
+  .editorial-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .editorial-actions .btn-blue-cta,
+  .editorial-actions .btn-outline-white {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    white-space: normal;
+    box-sizing: border-box;
+  }
+
+  /* Section 4: Why DREAMEXCH24 */
+  .section-why-dreamexch {
+    padding: 40px 0;
+  }
+  .why-dreamexch-card {
+    padding: 22px 14px;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .why-dreamexch-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+  .why-heading {
+    font-size: clamp(1.35rem, 5vw, 1.85rem);
+    line-height: 1.25;
+    margin-bottom: 14px;
+    overflow-wrap: break-word;
+  }
+  .badge-heres-why {
+    display: inline-block;
+    padding: 2px 12px;
+    font-size: 0.8em;
+    margin-top: 4px;
+  }
+  .why-description {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 18px;
+    overflow-wrap: break-word;
+  }
+  .why-pillars {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+  .why-pillar-item {
+    width: 100%;
+    font-size: 0.88rem;
+  }
+  .why-dreamexch-content a.btn-whatsapp-cta {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    white-space: normal;
+    box-sizing: border-box;
+  }
+  .infographic-wrapper {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .infographic-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Section 5: Types of Betting IDs */
+  .section-betting-types {
+    padding: 40px 0;
+  }
+  .editorial-section-title {
+    font-size: clamp(1.4rem, 5.2vw, 1.95rem);
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+  .editorial-section-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 22px;
+  }
+  .betting-types-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    width: 100%;
+  }
+  .betting-card {
+    padding: 18px 14px;
+    border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .betting-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .betting-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  /* Section 6: Steps */
+  .section {
+    padding: 40px 0;
+  }
+  .section-title {
+    font-size: clamp(1.35rem, 5vw, 1.85rem);
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .step-card {
+    padding: 22px 16px;
+    border-radius: 14px;
+  }
+  .step-number {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+  .step-title {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  /* Section 7: CTA Banner */
+  .cta-banner {
+    padding: 30px 16px;
+    border-radius: 16px;
+  }
+  .cta-title {
+    font-size: clamp(1.35rem, 5vw, 1.85rem);
+    line-height: 1.25;
+  }
+  .cta-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .cta-banner div[style*="display: flex"] {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+  .cta-banner .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Mobile App Bottom Bar */
+  .mobile-bottom-bar {
+    display: flex;
+    height: var(--mobile-nav-height);
+  }
+  .floating-whatsapp {
+    display: none;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 36px 0 calc(var(--mobile-nav-height) + 16px);
+  }
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 24px;
+    margin-bottom: 30px;
   }
-  
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 6px;
   }
-  
-  .hero-floating-stat {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+
+  .products-grid, .standards-grid, .about-hero-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Smartphone Optimization (<= 480px, e.g. Samsung, Xiaomi, iPhone) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .site-header .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .site-logo {
+    gap: 6px;
+  }
+  .site-logo img {
+    height: 30px;
+    width: 30px;
+  }
+  .site-logo-title {
+    font-size: 1.05rem;
+  }
+  .site-logo-tagline {
+    display: none;
+  }
+  .wa-btn-text-desktop {
+    display: none;
+  }
+  .wa-btn-text-mobile {
+    display: inline;
+  }
+  .btn-whatsapp-header {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+  .mobile-toggle {
+    width: 38px;
+    height: 38px;
+    padding: 7px;
+  }
+  .hero-section {
+    padding: 22px 0 36px;
+  }
+  .hero-title {
+    font-size: 1.45rem;
+  }
+  .why-dreamexch-card {
+    padding: 18px 12px;
+  }
+  .betting-card {
+    padding: 16px 12px;
   }
 }
 
@@ -2187,18 +2614,5 @@ button, input, textarea, select {
   .why-dreamexch-grid {
     grid-template-columns: 1fr;
     gap: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .stats-strip-card {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-  .betting-types-grid {
-    grid-template-columns: 1fr;
-  }
-  .why-dreamexch-card {
-    padding: 28px 20px;
   }
 }
