@@ -3,14 +3,17 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette */
-  --bg-darkest: #050811;
-  --bg-darker: #090e1d;
-  --bg-dark: #0f172a;
-  --bg-card: rgba(15, 23, 42, 0.75);
-  --bg-card-hover: rgba(30, 41, 59, 0.85);
-  --bg-glass: rgba(15, 23, 42, 0.65);
-  --bg-glass-strong: rgba(9, 14, 29, 0.92);
+  /* Color Palette - Pure Premium Black Theme Variations */
+  --bg-pitch: #040508;
+  --bg-darkest: #06070b;
+  --bg-shade-1: #080b12;
+  --bg-shade-2: #06080e;
+  --bg-shade-3: #080b11;
+  --bg-card: #0b0e17;
+  --bg-card-hover: #101420;
+  --bg-glass: rgba(8, 9, 13, 0.75);
+  --bg-glass-strong: rgba(7, 8, 12, 0.94);
+  --bg-surface: #080b12;
   
   /* Primary & Accent Colors */
   --gold-500: #facc15;
@@ -32,9 +35,9 @@
   --text-muted: #94a3b8;
   --text-subtle: #64748b;
   
-  /* Borders */
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card: rgba(255, 255, 255, 0.12);
+  /* Borders - Subtle 1px dividers for luxury black theme */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-card: rgba(255, 255, 255, 0.08);
   --border-gold: rgba(250, 204, 21, 0.3);
   --border-wa: rgba(37, 211, 102, 0.35);
 
@@ -44,9 +47,10 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.5);
   --shadow-glow-gold: 0 0 25px rgba(250, 204, 21, 0.25);
   --shadow-glow-wa: 0 0 25px rgba(37, 211, 102, 0.3);
 
@@ -143,7 +147,7 @@ button, input, textarea, select {
 
 /* Top Announcement Ticker */
 .top-announcement {
-  background: linear-gradient(90deg, #111827 0%, #1e1b4b 50%, #111827 100%);
+  background: #050609;
   border-bottom: 1px solid var(--border-subtle);
   font-size: 0.8125rem;
   padding: 8px 16px;
@@ -203,10 +207,12 @@ button, input, textarea, select {
 }
 
 .site-header .container {
-  max-width: 1560px;
   width: 100%;
-  padding-left: 24px;
-  padding-right: 24px;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .nav-container {
@@ -214,7 +220,7 @@ button, input, textarea, select {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  gap: 16px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -260,7 +266,7 @@ button, input, textarea, select {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 6px;
+  gap: 22px;
   flex-wrap: nowrap;
   white-space: nowrap;
   margin: 0;
@@ -268,10 +274,10 @@ button, input, textarea, select {
 }
 
 .nav-link {
-  font-size: 0.875rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-muted);
-  padding: 7px 11px;
+  padding: 8px 14px;
   border-radius: 8px;
   transition: all var(--transition-fast);
   position: relative;
@@ -622,8 +628,8 @@ button, input, textarea, select {
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid var(--border-card);
-  background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 30px rgba(250, 204, 21, 0.1);
+  background: #0b0e17;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
 }
 
 .hero-visual-image {
@@ -641,7 +647,7 @@ button, input, textarea, select {
 .hero-visual-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(5, 8, 17, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, transparent 40%, rgba(6, 7, 11, 0.3) 100%);
   pointer-events: none;
 }
 
@@ -756,10 +762,13 @@ button, input, textarea, select {
 .section {
   padding: 80px 0;
   position: relative;
+  background-color: var(--bg-shade-2);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .section-dark {
-  background: rgba(9, 14, 29, 0.6);
+  background-color: var(--bg-shade-1);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .section-header {
@@ -875,7 +884,7 @@ button, input, textarea, select {
   width: 100%;
   height: 240px;
   overflow: hidden;
-  background: #090e1d;
+  background: #080a10;
 }
 
 .product-img {
@@ -1039,12 +1048,12 @@ button, input, textarea, select {
    READY FOR ASSISTANCE / CALL TO ACTION BANNER
    ========================================================================== */
 .cta-banner {
-  background: linear-gradient(135deg, rgba(20, 29, 51, 0.9) 0%, rgba(10, 16, 32, 0.95) 100%);
-  border: 1px solid var(--border-gold);
+  background: linear-gradient(135deg, #0b0e17 0%, #101420 100%);
+  border: 1px solid var(--border-card);
   border-radius: 24px;
   padding: 60px 40px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(250, 204, 21, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
   position: relative;
   overflow: hidden;
 }
@@ -1201,10 +1210,10 @@ button, input, textarea, select {
    FOOTER
    ========================================================================== */
 .site-footer {
-  background: #03050a;
+  background: var(--bg-pitch);
   border-top: 1px solid var(--border-subtle);
   padding: 70px 0 30px;
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .footer-grid {
@@ -1368,13 +1377,13 @@ button, input, textarea, select {
   width: 82%;
   max-width: 320px;
   height: 100vh;
-  background: #090e1d;
+  background: #080a10;
   border-left: 1px solid var(--border-card);
   z-index: 200;
   display: flex;
   flex-direction: column;
   padding: 24px;
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
   transition: right var(--transition-normal);
 }
 
@@ -1445,24 +1454,17 @@ button, input, textarea, select {
    ========================================================================== */
 /* Intermediate Desktop Navigation (1081px - 1340px) */
 @media (max-width: 1340px) and (min-width: 1081px) {
-  .site-header .container {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
   .nav-menu {
-    gap: 3px;
+    gap: 16px;
   }
   .nav-link {
-    font-size: 0.8125rem;
-    padding: 6px 7px;
+    font-size: 0.88rem;
+    padding: 7px 10px;
   }
   .btn-whatsapp-header {
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    padding: 8px 14px;
+    font-size: 0.82rem;
     gap: 6px;
-  }
-  .site-logo-title {
-    font-size: 1.25rem;
   }
 }
 
@@ -1783,17 +1785,17 @@ button, input, textarea, select {
 }
 
 .stats-strip-card {
-  background: rgba(18, 26, 43, 0.95);
+  background: #0b0e16;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-card);
   border-radius: 16px;
   padding: 24px 28px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   gap: 16px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
 }
 
 .stat-item {
@@ -1843,9 +1845,7 @@ button, input, textarea, select {
 /* --- SECTION 3: EDITORIAL GET YOUR BETTING ID NOW --- */
 .section-editorial {
   padding: 70px 0;
-  background: radial-gradient(circle at 15% 50%, rgba(29, 91, 216, 0.12) 0%, transparent 60%),
-              radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.08) 0%, transparent 60%),
-              var(--bg-surface);
+  background: #080b12;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -1947,11 +1947,12 @@ button, input, textarea, select {
 /* --- SECTION 4: WHY DREAMEXCH24 --- */
 .section-why-dreamexch {
   padding: 80px 0;
+  background: var(--bg-shade-2);
 }
 
 .why-dreamexch-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-card);
   border-radius: 24px;
   padding: 48px 40px;
   box-shadow: var(--shadow-card);
@@ -2045,9 +2046,9 @@ button, input, textarea, select {
 .infographic-wrapper {
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
-  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  background: #080a11;
 }
 
 .infographic-img {
@@ -2064,7 +2065,7 @@ button, input, textarea, select {
 /* --- SECTION 5: TYPES OF BETTING IDS AVAILABLE IN INDIA --- */
 .section-betting-types {
   padding: 80px 0;
-  background: var(--bg-surface);
+  background: var(--bg-shade-3);
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -2094,7 +2095,7 @@ button, input, textarea, select {
 }
 
 .betting-card {
-  background: var(--bg-card);
+  background: #0c0f18;
   border: 1px solid var(--border-subtle);
   border-radius: 18px;
   padding: 30px 28px;
