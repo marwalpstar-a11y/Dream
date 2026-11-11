@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initScrollEffects();
   initFaqAccordion();
+  initBlogPage();
 });
 
 /**
@@ -214,4 +215,115 @@ function initFaqAccordion() {
       }
     });
   });
+}
+
+/**
+ * Interactive Blog Page Filtering & Full Article Modal Reader
+ */
+function initBlogPage() {
+  const filterChips = document.querySelectorAll('.blog-filter-chip');
+  const blogCards = document.querySelectorAll('.blog-card');
+  const featuredCard = document.querySelector('.blog-featured-card');
+  const modalBackdrop = document.getElementById('blogModalBackdrop');
+  const modalCloseBtn = document.getElementById('blogModalClose');
+
+  // Category Filtering
+  if (filterChips.length) {
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const selectedCat = chip.getAttribute('data-category');
+
+        if (blogCards.length) {
+          blogCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (selectedCat === 'all' || cardCat === selectedCat) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+
+        if (featuredCard) {
+          const featuredCat = featuredCard.getAttribute('data-category');
+          if (selectedCat === 'all' || featuredCat === selectedCat) {
+            featuredCard.style.display = '';
+          } else {
+            featuredCard.style.display = 'none';
+          }
+        }
+      });
+    });
+  }
+
+  // Article Modal Reader
+  if (modalBackdrop) {
+    const readBtns = document.querySelectorAll('[data-read-modal]');
+    const modalBadge = document.getElementById('modalBadge');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalMeta = document.getElementById('modalMeta');
+    const modalImage = document.getElementById('modalImage');
+    const modalBody = document.getElementById('modalBody');
+
+    const closeModal = () => {
+      modalBackdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    readBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const articleId = btn.getAttribute('data-article-id');
+        const articleDataEl = document.getElementById('article-data-' + articleId);
+
+        if (articleDataEl) {
+          try {
+            const data = JSON.parse(articleDataEl.textContent);
+            if (modalBadge) {
+              modalBadge.textContent = data.categoryLabel;
+              modalBadge.className = 'blog-badge ' + (data.badgeClass || 'blog-badge-cricket');
+            }
+            if (modalTitle) modalTitle.textContent = data.title;
+            if (modalMeta) {
+              modalMeta.innerHTML = `
+                <span class="blog-meta-item">📅 ${data.date}</span>
+                <span class="blog-meta-item">⏱️ ${data.readTime}</span>
+                <span class="blog-meta-item">✍️ ${data.author}</span>
+              `;
+            }
+            if (modalImage && data.image) {
+              modalImage.src = data.image;
+              modalImage.alt = data.title;
+            }
+            if (modalBody && data.body) {
+              modalBody.innerHTML = data.body;
+            }
+            modalBackdrop.classList.add('open');
+            document.body.style.overflow = 'hidden';
+          } catch (err) {
+            console.error('Error parsing article data:', err);
+          }
+        }
+      });
+    });
+
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener('click', closeModal);
+    }
+
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
 }

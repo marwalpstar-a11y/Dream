@@ -25,11 +25,13 @@ ServerSignature Off
   RewriteRule ^(.*)$ $1.html [L,QSA]
 </IfModule>
 
-# 4. MIME Types
+# 4. MIME Types & UTF-8 Character Encoding
+AddDefaultCharset UTF-8
 <IfModule mod_mime.c>
-  AddType text/html .html
-  AddType text/css .css
-  AddType application/javascript .js
+  AddCharset UTF-8 .html .css .js .json .xml
+  AddType "text/html; charset=UTF-8" .html
+  AddType "text/css; charset=UTF-8" .css
+  AddType "application/javascript; charset=UTF-8" .js
   AddType application/json .json
   AddType image/svg+xml .svg
   AddType image/webp .webp
@@ -42,13 +44,27 @@ ServerSignature Off
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
 </IfModule>
 
-# 6. Browser Caching
+# 6. Cache Control & Fresh Asset Delivery
+<IfModule mod_headers.c>
+  # HTML is never cached - always check server for freshest layout & deployment
+  <FilesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
+  # CSS and JS have revalidation so new versions are fetched immediately upon deploy
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
   ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 1 week"
-  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 hour"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
