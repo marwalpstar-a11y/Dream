@@ -1279,17 +1279,17 @@ button, input, textarea, select {
 }
 
 /* ==========================================================================
-   FLOATING ACTION BUTTONS (WHATSAPP + TELEGRAM CHANNEL)
+   FLOATING ACTION BUTTONS (CIRCULAR WHATSAPP + TELEGRAM CAPSULE BANNER)
    ========================================================================== */
 .floating-action-group {
   position: fixed;
   bottom: 24px;
-  right: 20px;
+  right: 24px;
   z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 12px;
+  gap: 14px;
   pointer-events: none;
 }
 
@@ -1297,74 +1297,281 @@ button, input, textarea, select {
   pointer-events: auto;
 }
 
-/* Floating WhatsApp Quick Action Button */
+/* WhatsApp Circular Floating Button */
+.floating-whatsapp-circle,
 .floating-whatsapp {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  min-height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2ae065 0%, #25d366 45%, #128c7e 100%);
+  border: 2.5px solid #ffffff;
   color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 9999px;
-  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
   text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.5), 0 8px 24px rgba(0, 0, 0, 0.35);
+  animation: floatWhatsApp 4s ease-in-out infinite, pulseWhatsApp 3s ease-in-out infinite;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  overflow: hidden;
+  padding: 0;
 }
 
+.floating-whatsapp-circle:hover,
 .floating-whatsapp:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.8), 0 0 0 6px rgba(37, 211, 102, 0.25);
   color: #ffffff;
 }
 
+.floating-whatsapp-circle svg,
 .floating-whatsapp svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  transition: transform 0.25s ease;
+  z-index: 2;
   flex-shrink: 0;
 }
 
-/* Floating Telegram Channel Button (Directly Below WhatsApp) */
+.floating-whatsapp-circle:hover svg,
+.floating-whatsapp:hover svg {
+  transform: scale(1.08);
+}
+
+/* Hide old text span if present in circular WhatsApp button */
+.floating-whatsapp-circle span:not(.whatsapp-glow-pulse),
+.floating-whatsapp > span {
+  display: none;
+}
+
+/* WhatsApp Shimmer Sweep */
+.floating-whatsapp-circle::after,
+.floating-whatsapp::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+  transform: skewX(-25deg);
+  animation: shimmerSweepCircle 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Telegram Capsule Banner Pill Button (Larger & More Eye-Catching) */
+.floating-telegram-banner,
 .floating-telegram {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  height: 56px;
+  padding: 5px 18px 5px 6px;
   border-radius: 9999px;
-  transition: all var(--transition-fast);
+  background: linear-gradient(135deg, #00a2ff 0%, #0084f7 45%, #0060db 100%);
+  border: 2.5px solid #ffffff;
+  color: #ffffff;
   text-decoration: none;
-  filter: drop-shadow(0 8px 25px rgba(34, 158, 217, 0.45));
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(0, 150, 255, 0.55), 0 10px 30px rgba(0, 50, 180, 0.35);
+  animation: floatTelegram 4s ease-in-out infinite, pulseTelegram 2.8s ease-in-out infinite;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
+.floating-telegram-banner:hover,
 .floating-telegram:hover {
-  transform: scale(1.05) translateY(-2px);
-  filter: drop-shadow(0 12px 32px rgba(34, 158, 217, 0.7));
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 36px rgba(0, 160, 255, 0.85), 0 0 0 6px rgba(0, 160, 255, 0.25);
+  color: #ffffff;
 }
 
+/* Telegram Circular White Badge */
+.telegram-badge {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 40, 130, 0.3);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.telegram-badge svg {
+  width: 24px;
+  height: 24px;
+  fill: #0088cc;
+  filter: drop-shadow(0 1px 2px rgba(0, 100, 200, 0.3));
+  transform: translate(-0.5px, 0.5px);
+  flex-shrink: 0;
+}
+
+/* Vertical Divider */
+.telegram-divider {
+  width: 1.5px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.55);
+  margin: 0 12px 0 10px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+/* Text Group */
+.telegram-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  line-height: 1.18;
+  z-index: 2;
+}
+
+.telegram-title {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.telegram-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.01em;
+}
+
+/* Continuous Shimmer Light-Sweep Reflection */
+.floating-telegram-banner::after,
+.floating-telegram::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -120%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+  transform: skewX(-25deg);
+  animation: shimmerSweep 3.2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Legacy img banner fallback */
 .telegram-banner-img {
   display: block;
   height: 52px;
   width: auto;
-  max-width: 175px;
+  max-width: 180px;
   object-fit: contain;
   border-radius: 9999px;
 }
 
+/* ==========================================================================
+   CONTINUOUS LOOPING ANIMATIONS
+   ========================================================================== */
+@keyframes floatWhatsApp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes floatTelegram {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulseWhatsApp {
+  0%, 100% {
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  50% {
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.8), 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes pulseTelegram {
+  0%, 100% {
+    box-shadow: 0 6px 24px rgba(0, 150, 255, 0.55), 0 0 0 0 rgba(0, 160, 255, 0.65);
+  }
+  50% {
+    box-shadow: 0 10px 36px rgba(0, 160, 255, 0.9), 0 0 0 10px rgba(0, 160, 255, 0);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    left: -120%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.75;
+  }
+  55% {
+    left: 180%;
+    opacity: 0;
+  }
+  100% {
+    left: 180%;
+    opacity: 0;
+  }
+}
+
+@keyframes shimmerSweepCircle {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  60% {
+    left: 160%;
+    opacity: 0;
+  }
+  100% {
+    left: 160%;
+    opacity: 0;
+  }
+}
+
 /* Standalone fallbacks if elements are rendered outside .floating-action-group */
-.floating-whatsapp:not(.floating-action-group *) {
+.floating-whatsapp:not(.floating-action-group *),
+.floating-whatsapp-circle:not(.floating-action-group *) {
   position: fixed;
-  bottom: 88px;
-  right: 20px;
+  bottom: 92px;
+  right: 24px;
   z-index: 999;
 }
 
-.floating-telegram:not(.floating-action-group *) {
+.floating-telegram:not(.floating-action-group *),
+.floating-telegram-banner:not(.floating-action-group *) {
   position: fixed;
   bottom: 24px;
-  right: 20px;
+  right: 24px;
   z-index: 999;
 }
 
@@ -1964,20 +2171,54 @@ button, input, textarea, select {
     gap: 10px;
   }
 
+  .floating-whatsapp-circle,
   .floating-whatsapp {
-    display: inline-flex !important;
-    padding: 10px 16px;
-    font-size: 0.82rem;
-    gap: 8px;
+    display: flex !important;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-width: 2px;
+    padding: 0 !important;
   }
 
+  .floating-whatsapp-circle svg,
   .floating-whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .floating-telegram-banner,
+  .floating-telegram {
+    display: inline-flex !important;
+    height: 48px;
+    padding: 4px 14px 4px 5px;
+    border-width: 2px;
+  }
+
+  .telegram-badge {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .telegram-badge svg {
     width: 20px;
     height: 20px;
   }
 
-  .floating-telegram {
-    display: inline-flex !important;
+  .telegram-divider {
+    height: 22px;
+    margin: 0 8px 0 7px;
+  }
+
+  .telegram-title {
+    font-size: 0.84rem;
+  }
+
+  .telegram-subtitle {
+    font-size: 0.7rem;
   }
 
   .telegram-banner-img {
@@ -2056,14 +2297,45 @@ button, input, textarea, select {
     right: 10px;
     gap: 8px;
   }
+  .floating-whatsapp-circle,
   .floating-whatsapp {
-    padding: 8px 14px;
-    font-size: 0.78rem;
-    gap: 6px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-width: 2px;
+    padding: 0 !important;
   }
+  .floating-whatsapp-circle svg,
   .floating-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+  .floating-telegram-banner,
+  .floating-telegram {
+    height: 44px;
+    padding: 3px 12px 3px 4px;
+    border-width: 2px;
+  }
+  .telegram-badge {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+  }
+  .telegram-badge svg {
     width: 18px;
     height: 18px;
+  }
+  .telegram-divider {
+    height: 18px;
+    margin: 0 7px 0 6px;
+  }
+  .telegram-title {
+    font-size: 0.78rem;
+  }
+  .telegram-subtitle {
+    font-size: 0.65rem;
   }
   .telegram-banner-img {
     height: 38px;

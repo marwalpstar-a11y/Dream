@@ -21,7 +21,7 @@ function initTelegramLinks() {
   const config = window.CONFIG || {
     telegramUrl: "https://t.me/dreamexchonline"
   };
-  const tgButtons = document.querySelectorAll('[data-telegram-btn], .floating-telegram');
+  const tgButtons = document.querySelectorAll('[data-telegram-btn], .floating-telegram, .floating-telegram-banner');
   tgButtons.forEach(btn => {
     btn.setAttribute('href', config.telegramUrl || "https://t.me/dreamexchonline");
     btn.setAttribute('target', '_blank');
@@ -42,7 +42,7 @@ function initWhatsAppLinks() {
   };
 
   // Find all elements marked with data-wa-trigger
-  const waButtons = document.querySelectorAll('[data-wa-btn]');
+  const waButtons = document.querySelectorAll('[data-wa-btn], .floating-whatsapp, .floating-whatsapp-circle');
   waButtons.forEach(btn => {
     const customMsg = btn.getAttribute('data-wa-msg') || config.defaultInquiryMessage;
     btn.setAttribute('href', config.getWhatsAppUrl(customMsg));
