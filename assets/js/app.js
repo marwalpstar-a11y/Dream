@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initWhatsAppLinks();
+  initTelegramLinks();
   initMobileDrawer();
   initProductFilters();
   initContactForm();
@@ -12,6 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initBlogPage();
 });
+
+/**
+ * Configure all Telegram triggers dynamically from window.CONFIG
+ */
+function initTelegramLinks() {
+  const config = window.CONFIG || {
+    telegramUrl: "https://t.me/dreamexchonline"
+  };
+  const tgButtons = document.querySelectorAll('[data-telegram-btn], .floating-telegram');
+  tgButtons.forEach(btn => {
+    btn.setAttribute('href', config.telegramUrl || "https://t.me/dreamexchonline");
+    btn.setAttribute('target', '_blank');
+    btn.setAttribute('rel', 'noopener noreferrer');
+  });
+}
 
 /**
  * Configure all WhatsApp triggers dynamically from window.CONFIG

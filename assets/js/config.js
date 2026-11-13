@@ -27,7 +27,7 @@ const CONFIG = {
   supportAvailability: "24/7 Match-Day Support Desk",
   
   // Social and External Links
-  telegramUrl: "https://t.me/dreamexch24",
+  telegramUrl: "https://t.me/dreamexchonline",
 };
 
 // Export to window
