@@ -1,0 +1,97 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%" style="background:#090d16; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background grid & border -->
+  <rect width="900" height="420" rx="16" fill="url(#g1)" stroke="rgba(250,204,21,0.25)" stroke-width="2"/>
+  
+  <!-- Header Title -->
+  <text x="450" y="48" text-anchor="middle" fill="#facc15" font-size="22" font-weight="800" letter-spacing="1">VERIFIED ONLINE CRICKET ID ARCHITECTURE</text>
+  <text x="450" y="74" text-anchor="middle" fill="#94a3b8" font-size="13">Direct Master Agent Access vs Unregulated Local Bookies</text>
+
+  <!-- Step 1: User / Punters -->
+  <g transform="translate(60, 110)">
+    <rect width="210" height="230" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="105" cy="50" r="28" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
+    <text x="105" y="58" text-anchor="middle" fill="#60a5fa" font-size="24">👤</text>
+    <text x="105" y="105" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">1. Verified Punters</text>
+    <text x="105" y="130" text-anchor="middle" fill="#94a3b8" font-size="12">Direct WhatsApp Request</text>
+    <rect x="25" y="150" width="160" height="28" rx="6" fill="#1e293b"/>
+    <text x="105" y="169" text-anchor="middle" fill="#cbd5e1" font-size="11">WhatsApp: +91 9549376324</text>
+    <rect x="25" y="186" width="160" height="28" rx="6" fill="rgba(16,185,129,0.15)" stroke="#10b981" stroke-width="1"/>
+    <text x="105" y="205" text-anchor="middle" fill="#34d399" font-size="11" font-weight="600">⚡ 5-Min Onboarding</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <g transform="translate(285, 210)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#facc15" stroke-width="3" stroke-dasharray="6,4"/>
+    <polygon points="50,-6 62,0 50,6" fill="#facc15"/>
+    <text x="31" y="-12" text-anchor="middle" fill="#facc15" font-size="11" font-weight="700">UPI / QR</text>
+  </g>
+
+  <!-- Step 2: DreamExch24 Master Desk -->
+  <g transform="translate(345, 95)">
+    <rect width="230" height="260" rx="16" fill="#131b2e" stroke="url(#gold)" stroke-width="2" filter="url(#glow)"/>
+    <rect width="230" height="260" rx="16" fill="#131b2e"/>
+    <rect x="15" y="-14" width="200" height="28" rx="14" fill="url(#gold)"/>
+    <text x="115" y="5" text-anchor="middle" fill="#000000" font-size="12" font-weight="900" letter-spacing="1">DREAMEXCH24 MASTER DESK</text>
+    
+    <circle cx="115" cy="58" r="30" fill="rgba(250,204,21,0.15)" stroke="#facc15" stroke-width="2"/>
+    <text x="115" y="67" text-anchor="middle" fill="#facc15" font-size="26">🛡️</text>
+    
+    <text x="115" y="112" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">Official Master Agent</text>
+    <text x="115" y="132" text-anchor="middle" fill="#94a3b8" font-size="12">24/7 Human Mediation Desk</text>
+
+    <line x1="25" y1="148" x2="205" y2="148" stroke="rgba(255,255,255,0.08)"/>
+
+    <text x="40" y="174" fill="#34d399" font-size="12">✓ Zero Bot Interference</text>
+    <text x="40" y="196" fill="#34d399" font-size="12">✓ 15-Min UPI Withdrawals</text>
+    <text x="40" y="218" fill="#34d399" font-size="12">✓ 100% Locked ID Recovery</text>
+    <text x="40" y="240" fill="#34d399" font-size="12">✓ 500+ Platform Coverage</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <g transform="translate(590, 210)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#facc15" stroke-width="3" stroke-dasharray="6,4"/>
+    <polygon points="50,-6 62,0 50,6" fill="#facc15"/>
+    <text x="31" y="-12" text-anchor="middle" fill="#facc15" font-size="11" font-weight="700">API SYNC</text>
+  </g>
+
+  <!-- Step 3: Global Sports Exchanges -->
+  <g transform="translate(640, 110)">
+    <rect width="200" height="230" rx="14" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <circle cx="100" cy="50" r="28" fill="rgba(168,85,247,0.15)" stroke="#a855f7" stroke-width="2"/>
+    <text x="100" y="58" text-anchor="middle" fill="#c084fc" font-size="24">🌐</text>
+    <text x="100" y="105" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">3. Exchange Markets</text>
+    <text x="100" y="130" text-anchor="middle" fill="#94a3b8" font-size="12">Live Back &amp; Lay Liquidity</text>
+
+    <rect x="20" y="146" width="160" height="24" rx="6" fill="#1e293b"/>
+    <text x="100" y="162" text-anchor="middle" fill="#facc15" font-size="11" font-weight="600">Lotus365 • SkyExchange</text>
+
+    <rect x="20" y="176" width="160" height="24" rx="6" fill="#1e293b"/>
+    <text x="100" y="192" text-anchor="middle" fill="#facc15" font-size="11" font-weight="600">TigerExch • DiamondExch</text>
+
+    <rect x="20" y="206" width="160" height="24" rx="6" fill="#1e293b"/>
+    <text x="100" y="222" text-anchor="middle" fill="#facc15" font-size="11" font-weight="600">LaserBook247 • World777</text>
+  </g>
+
+  <!-- Footer security guarantee bar -->
+  <rect x="60" y="370" width="780" height="32" rx="8" fill="rgba(250,204,21,0.06)" stroke="rgba(250,204,21,0.2)"/>
+  <text x="450" y="391" text-anchor="middle" fill="#cbd5e1" font-size="12">🔒 <strong fill="#ffffff">Safe &amp; Encrypted:</strong> Real-time match odds, zero commission cuts, and instant direct bank payouts via UPI.</text>
+</svg>

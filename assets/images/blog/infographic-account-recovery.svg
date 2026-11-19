@@ -1,0 +1,53 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%" style="background:#080c14; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <rect width="900" height="380" rx="16" fill="#0d111d" stroke="rgba(168,85,247,0.3)" stroke-width="2"/>
+  <text x="450" y="44" text-anchor="middle" fill="#c084fc" font-size="22" font-weight="800">BLOCKED ID &amp; STUCK FUNDS: 4-STEP RECOVERY PROTOCOL</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">How DreamExch24 Master Desk Protects Your Capital from Rogue Agents</text>
+
+  <g transform="translate(50, 105)">
+    <rect width="185" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="92" y="32" text-anchor="middle" fill="#a855f7" font-size="14" font-weight="800">Step 1: Freeze</text>
+    <text x="92" y="52" text-anchor="middle" fill="#94a3b8" font-size="11">Stop Retrying Password</text>
+    <line x1="15" y1="65" x2="170" y2="65" stroke="rgba(255,255,255,0.08)"/>
+    <text x="15" y="95" fill="#cbd5e1" font-size="11">• Avoid 5+ failed attempts</text>
+    <text x="15" y="125" fill="#cbd5e1" font-size="11">• Take screenshot of error</text>
+    <text x="15" y="155" fill="#cbd5e1" font-size="11">• Note last balance</text>
+    <rect x="15" y="180" width="155" height="28" rx="6" fill="#1e293b"/>
+    <text x="92" y="198" text-anchor="middle" fill="#cbd5e1" font-size="11">Prevent Hard Ban</text>
+  </g>
+
+  <g transform="translate(255, 105)">
+    <rect width="185" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="92" y="32" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="800">Step 2: Message</text>
+    <text x="92" y="52" text-anchor="middle" fill="#94a3b8" font-size="11">Official WhatsApp Desk</text>
+    <line x1="15" y1="65" x2="170" y2="65" stroke="rgba(255,255,255,0.08)"/>
+    <text x="15" y="95" fill="#cbd5e1" font-size="11">• WhatsApp +91 9549376324</text>
+    <text x="15" y="125" fill="#cbd5e1" font-size="11">• Share registered mobile</text>
+    <text x="15" y="155" fill="#cbd5e1" font-size="11">• Human agent assigned</text>
+    <rect x="15" y="180" width="155" height="28" rx="6" fill="#1e293b"/>
+    <text x="92" y="198" text-anchor="middle" fill="#60a5fa" font-size="11">&lt; 30s Response</text>
+  </g>
+
+  <g transform="translate(460, 105)">
+    <rect width="185" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="92" y="32" text-anchor="middle" fill="#facc15" font-size="14" font-weight="800">Step 3: Verify</text>
+    <text x="92" y="52" text-anchor="middle" fill="#94a3b8" font-size="11">UTR Payment Match</text>
+    <line x1="15" y1="65" x2="170" y2="65" stroke="rgba(255,255,255,0.08)"/>
+    <text x="15" y="95" fill="#cbd5e1" font-size="11">• Cross-check last deposit</text>
+    <text x="15" y="125" fill="#cbd5e1" font-size="11">• Verify master ledger</text>
+    <text x="15" y="155" fill="#cbd5e1" font-size="11">• Reset auth token</text>
+    <rect x="15" y="180" width="155" height="28" rx="6" fill="#1e293b"/>
+    <text x="92" y="198" text-anchor="middle" fill="#facc15" font-size="11">Master API Audit</text>
+  </g>
+
+  <g transform="translate(665, 105)">
+    <rect width="185" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="92" y="32" text-anchor="middle" fill="#10b981" font-size="14" font-weight="800">Step 4: Unlock</text>
+    <text x="92" y="52" text-anchor="middle" fill="#94a3b8" font-size="11">Full Balance Restored</text>
+    <line x1="15" y1="65" x2="170" y2="65" stroke="rgba(255,255,255,0.08)"/>
+    <text x="15" y="95" fill="#cbd5e1" font-size="11">• New secure credentials</text>
+    <text x="15" y="125" fill="#cbd5e1" font-size="11">• 100% balance intact</text>
+    <text x="15" y="155" fill="#cbd5e1" font-size="11">• Optional full withdrawal</text>
+    <rect x="15" y="180" width="155" height="28" rx="6" fill="#1e293b"/>
+    <text x="92" y="198" text-anchor="middle" fill="#34d399" font-size="11">Resolved in &lt; 10m</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%" style="background:#080c14; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <rect width="900" height="380" rx="16" fill="#0c101d" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
+  <text x="450" y="44" text-anchor="middle" fill="#fbbf24" font-size="22" font-weight="800">HOW TO SPOT FAKE TELEGRAM CRICKET ID SCAMMERS</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">Checklist Before You Send Money to Any Agent</text>
+
+  <!-- Left: 3 Red Flags -->
+  <g transform="translate(60, 105)">
+    <rect width="360" height="230" rx="14" fill="#1c1214" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" fill="#f87171" font-size="15" font-weight="700">🚩 3 DEADLY RED FLAGS (AVOID!)</text>
+    <text x="24" y="74" fill="#e2e8f0" font-size="13">1. Fixed Match / 100% Sure Shot Claims</text>
+    <text x="24" y="108" fill="#e2e8f0" font-size="13">2. Withdrawal Fee / Tax Asked Before Payout</text>
+    <text x="24" y="142" fill="#e2e8f0" font-size="13">3. Personal Name UPI (Changing daily)</text>
+    <text x="24" y="176" fill="#f87171" font-size="12">If an agent asks ₹2,000 fee to release your ₹50,000 win, it is 100% a fraud.</text>
+    <rect x="20" y="194" width="320" height="24" rx="4" fill="#7f1d1d"/>
+    <text x="180" y="211" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="700">DREAMEXCH24 NEVER CHARGES WITHDRAWAL FEES</text>
+  </g>
+
+  <!-- Right: 3 Trust Verification Steps -->
+  <g transform="translate(480, 105)">
+    <rect width="360" height="230" rx="14" fill="#0d1f19" stroke="#10b981" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" fill="#34d399" font-size="15" font-weight="700">🛡️ DREAMEXCH24 VERIFIED STANDARDS</text>
+    <text x="24" y="74" fill="#ffffff" font-size="13">✓ Official Master WhatsApp Desk (+91 9549376324)</text>
+    <text x="24" y="108" fill="#ffffff" font-size="13">✓ Free Demo ID to test before real deposit</text>
+    <text x="24" y="142" fill="#ffffff" font-size="13">✓ Fast ₹100 Test Deposit &amp; Immediate Test Payout</text>
+    <text x="24" y="176" fill="#34d399" font-size="12">2,00,000+ active punters since 2019 across India.</text>
+    <rect x="20" y="194" width="320" height="24" rx="4" fill="#065f46"/>
+    <text x="180" y="211" text-anchor="middle" fill="#a7f3d0" font-size="11" font-weight="700">100% PAYMENT GUARANTEE OR FULL REFUND</text>
+  </g>
+</svg>

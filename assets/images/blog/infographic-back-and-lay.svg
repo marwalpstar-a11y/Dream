@@ -1,0 +1,35 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%" style="background:#080c14; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <rect width="900" height="380" rx="16" fill="#0c101d" stroke="rgba(236,72,153,0.3)" stroke-width="2"/>
+  <text x="450" y="44" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">BACK &amp; LAY BETTING EXCHANGE MECHANICS</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">How to Guarantee Profit Before Match Ends (Green Book Strategy)</text>
+
+  <!-- Left: BACK Box (Blue) -->
+  <g transform="translate(60, 105)">
+    <rect width="360" height="230" rx="14" fill="#0e1e38" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="0" y="0" width="360" height="40" rx="14" fill="#1d4ed8"/>
+    <text x="180" y="26" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">🔵 BACK (Betting FOR an Outcome to Happen)</text>
+    
+    <text x="24" y="72" fill="#93c5fd" font-size="13" font-weight="700">Example: Back India @ 2.10 with ₹1,000</text>
+    <text x="24" y="105" fill="#cbd5e1" font-size="13">• If India Wins: You win ₹1,100 clean profit</text>
+    <text x="24" y="135" fill="#cbd5e1" font-size="13">• If India Loses: You lose only your stake (₹1,000)</text>
+    <text x="24" y="165" fill="#94a3b8" font-size="12">Risk is limited strictly to your stake amount.</text>
+    
+    <rect x="20" y="188" width="320" height="28" rx="6" fill="#1e3a8a"/>
+    <text x="180" y="207" text-anchor="middle" fill="#bfdbfe" font-size="12" font-weight="600">Standard Punter Position (Blue Box on Exchange)</text>
+  </g>
+
+  <!-- Right: LAY Box (Pink) -->
+  <g transform="translate(480, 105)">
+    <rect width="360" height="230" rx="14" fill="#2a101f" stroke="#ec4899" stroke-width="2"/>
+    <rect x="0" y="0" width="360" height="40" rx="14" fill="#be185d"/>
+    <text x="180" y="26" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">🔴 LAY (Betting AGAINST an Outcome to Happen)</text>
+    
+    <text x="24" y="72" fill="#f472b6" font-size="13" font-weight="700">Example: Lay Australia @ 1.90 with ₹1,000</text>
+    <text x="24" y="105" fill="#cbd5e1" font-size="13">• If Australia Loses: You win ₹1,000 backer's stake</text>
+    <text x="24" y="135" fill="#cbd5e1" font-size="13">• If Australia Wins: You pay liability (₹900)</text>
+    <text x="24" y="165" fill="#94a3b8" font-size="12">You act as the bookmaker and collect punter stakes.</text>
+
+    <rect x="20" y="188" width="320" height="28" rx="6" fill="#831843"/>
+    <text x="180" y="207" text-anchor="middle" fill="#fbcfe8" font-size="12" font-weight="600">Bookie Mode (Pink Box on Exchange)</text>
+  </g>
+</svg>

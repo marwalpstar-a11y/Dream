@@ -1,0 +1,47 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%" style="background:#080c14; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <rect width="900" height="380" rx="16" fill="#0a0e1c" stroke="rgba(250,204,21,0.3)" stroke-width="2"/>
+  <text x="450" y="44" text-anchor="middle" fill="#facc15" font-size="22" font-weight="800">IPL 2026 LIVE SESSION BETTING &amp; FANCY RATES DECODED</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">Master Powerplay, 10-Over Session &amp; Wicket Fall Trading</text>
+
+  <!-- Session 1: 6 Over Powerplay -->
+  <g transform="translate(60, 105)">
+    <rect width="240" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="120" y="32" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">6-OVER POWERPLAY</text>
+    <text x="120" y="52" text-anchor="middle" fill="#facc15" font-size="12">Fancy Line: 48 - 50 Runs</text>
+    <rect x="20" y="68" width="200" height="60" rx="6" fill="#1e293b"/>
+    <text x="120" y="90" text-anchor="middle" fill="#93c5fd" font-size="11">YES (Over 50) @ 100/100</text>
+    <text x="120" y="112" text-anchor="middle" fill="#f472b6" font-size="11">NOT (Under 48) @ 100/100</text>
+    <text x="24" y="152" fill="#94a3b8" font-size="11">Strategy:</text>
+    <text x="24" y="172" fill="#cbd5e1" font-size="11">• Check Wankhede / Chinnaswamy</text>
+    <text x="24" y="192" fill="#cbd5e1" font-size="11">• If 2 quick wickets fall, Lay 50</text>
+    <text x="24" y="212" fill="#34d399" font-size="11">• Fast pitch = Yes 48 runs</text>
+  </g>
+
+  <!-- Session 2: 15-Over & 20-Over Lambi -->
+  <g transform="translate(330, 105)">
+    <rect width="240" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="120" y="32" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">20-OVER "LAMBI" PAR</text>
+    <text x="120" y="52" text-anchor="middle" fill="#facc15" font-size="12">Fancy Line: 182 - 186 Runs</text>
+    <rect x="20" y="68" width="200" height="60" rx="6" fill="#1e293b"/>
+    <text x="120" y="90" text-anchor="middle" fill="#93c5fd" font-size="11">YES (186+) Rate: 100/105</text>
+    <text x="120" y="112" text-anchor="middle" fill="#f472b6" font-size="11">NOT (Under 182) Rate: 100/95</text>
+    <text x="24" y="152" fill="#94a3b8" font-size="11">Strategy:</text>
+    <text x="24" y="172" fill="#cbd5e1" font-size="11">• Death bowler quality (Bumrah)</text>
+    <text x="24" y="192" fill="#cbd5e1" font-size="11">• Dew factor in 2nd innings</text>
+    <text x="24" y="212" fill="#34d399" font-size="11">• Lock both sides for green book</text>
+  </g>
+
+  <!-- Session 3: Player / Individual Fancy -->
+  <g transform="translate(600, 105)">
+    <rect width="240" height="225" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.1)"/>
+    <text x="120" y="32" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">PLAYER PERFORMANCE</text>
+    <text x="120" y="52" text-anchor="middle" fill="#facc15" font-size="12">Batsman Runs: 32.5 Runs</text>
+    <rect x="20" y="68" width="200" height="60" rx="6" fill="#1e293b"/>
+    <text x="120" y="90" text-anchor="middle" fill="#93c5fd" font-size="11">OVER 32.5 Runs</text>
+    <text x="120" y="112" text-anchor="middle" fill="#f472b6" font-size="11">UNDER 32.5 Runs</text>
+    <text x="24" y="152" fill="#94a3b8" font-size="11">Strategy:</text>
+    <text x="24" y="172" fill="#cbd5e1" font-size="11">• Head-to-Head matchup vs bowler</text>
+    <text x="24" y="192" fill="#cbd5e1" font-size="11">• Form over last 5 IPL innings</text>
+    <text x="24" y="212" fill="#34d399" font-size="11">• Spin vs Pace strike rate</text>
+  </g>
+</svg>

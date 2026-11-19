@@ -1,0 +1,33 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%" style="background:#090d16; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <rect width="900" height="420" rx="16" fill="#0b1120" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <text x="450" y="45" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">TRADITIONAL BOOKIE VS. SPORTS EXCHANGE ID</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">Why 92% of Pro Indian Punters Have Switched to Betting Exchanges</text>
+
+  <!-- Traditional Bookie Box (Red Tint) -->
+  <g transform="translate(60, 100)">
+    <rect width="360" height="280" rx="14" fill="#1a111a" stroke="#ef4444" stroke-width="1.5"/>
+    <rect x="0" y="0" width="360" height="44" rx="14" fill="#7f1d1d"/>
+    <text x="180" y="28" text-anchor="middle" fill="#fecaca" font-size="15" font-weight="800">❌ TRADITIONAL LOCAL BOOKIE</text>
+    
+    <text x="24" y="80" fill="#f87171" font-size="14" font-weight="700">Disadvantages &amp; Red Flags:</text>
+    <text x="24" y="115" fill="#e2e8f0" font-size="13">⚠️ Bet ONLY "Back" (House always wins)</text>
+    <text x="24" y="150" fill="#e2e8f0" font-size="13">⚠️ Fixed Poor Odds (Heavy 8-15% bookmaker cut)</text>
+    <text x="24" y="185" fill="#e2e8f0" font-size="13">⚠️ Manual Khata Diaries &amp; Delayed settlements</text>
+    <text x="24" y="220" fill="#e2e8f0" font-size="13">⚠️ Frequent Account Closure on Winning streaks</text>
+    <text x="24" y="255" fill="#fca5a5" font-size="12" font-style="italic">High risk of fund disappearance and zero support.</text>
+  </g>
+
+  <!-- Sports Exchange Box (Green/Gold Tint) -->
+  <g transform="translate(480, 100)">
+    <rect width="360" height="280" rx="14" fill="#0f1f1d" stroke="#10b981" stroke-width="2"/>
+    <rect x="0" y="0" width="360" height="44" rx="14" fill="#065f46"/>
+    <text x="180" y="28" text-anchor="middle" fill="#a7f3d0" font-size="15" font-weight="800">✅ DREAMEXCH24 EXCHANGE ID</text>
+    
+    <text x="24" y="80" fill="#34d399" font-size="14" font-weight="700">Verified Exchange Advantages:</text>
+    <text x="24" y="115" fill="#ffffff" font-size="13">⭐ Back AND Lay (Act as punter or bookmaker)</text>
+    <text x="24" y="150" fill="#ffffff" font-size="13">⭐ Peer-to-Peer Global Odds (Higher by 15-25%)</text>
+    <text x="24" y="185" fill="#ffffff" font-size="13">⭐ Cash-Out Feature (Lock profit mid-match)</text>
+    <text x="24" y="220" fill="#ffffff" font-size="13">⭐ 15-Min Guaranteed Payouts via Instant UPI</text>
+    <text x="24" y="255" fill="#facc15" font-size="12" font-weight="700">2,00,000+ active players trust DreamExch24 Master Desk.</text>
+  </g>
+</svg>

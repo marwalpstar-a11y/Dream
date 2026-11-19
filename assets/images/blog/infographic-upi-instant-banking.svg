@@ -1,0 +1,33 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%" style="background:#080c14; border-radius:16px; font-family:'Plus Jakarta Sans', system-ui, sans-serif;">
+  <rect width="900" height="380" rx="16" fill="#0a0f1d" stroke="rgba(59,130,246,0.25)" stroke-width="2"/>
+  <text x="450" y="44" text-anchor="middle" fill="#60a5fa" font-size="22" font-weight="800">INSTANT UPI SELF-DEPOSIT &amp; WITHDRAWAL SYSTEM</text>
+  <text x="450" y="70" text-anchor="middle" fill="#94a3b8" font-size="13">Direct Indian Bank Settlement • 0% Transaction Fee • 15-Minute Cashout</text>
+
+  <!-- Left: Deposit Flow -->
+  <g transform="translate(60, 105)">
+    <rect width="360" height="230" rx="14" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" fill="#93c5fd" font-size="15" font-weight="700">📥 SELF-DEPOSIT (Instant 60 Seconds)</text>
+    
+    <text x="24" y="72" fill="#cbd5e1" font-size="13">1. Select Payment App: GPay, PhonePe, Paytm, BHIM</text>
+    <text x="24" y="105" fill="#cbd5e1" font-size="13">2. Scan Official Desk QR or enter Dynamic VPA</text>
+    <text x="24" y="138" fill="#cbd5e1" font-size="13">3. Submit 12-Digit UTR Ref Number on WhatsApp</text>
+    <text x="24" y="171" fill="#cbd5e1" font-size="13">4. Chips Credited Instantly to your Exchange Balance</text>
+
+    <rect x="20" y="188" width="320" height="28" rx="6" fill="rgba(16,185,129,0.15)"/>
+    <text x="180" y="207" text-anchor="middle" fill="#34d399" font-size="12" font-weight="700">✓ Average Credit Time: 45 to 90 seconds</text>
+  </g>
+
+  <!-- Right: Withdrawal Flow -->
+  <g transform="translate(480, 105)">
+    <rect width="360" height="230" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="180" y="32" text-anchor="middle" fill="#a7f3d0" font-size="15" font-weight="700">📤 FAST WITHDRAWAL (10-15 Minutes)</text>
+    
+    <text x="24" y="72" fill="#cbd5e1" font-size="13">1. Message Official Payout Desk on WhatsApp</text>
+    <text x="24" y="105" fill="#cbd5e1" font-size="13">2. Specify Withdrawal Amount &amp; Bank Account / UPI ID</text>
+    <text x="24" y="138" fill="#cbd5e1" font-size="13">3. Automated Chips Deducted from Exchange Account</text>
+    <text x="24" y="171" fill="#cbd5e1" font-size="13">4. Direct IMPS / NEFT Transfer straight to your bank</text>
+
+    <rect x="20" y="188" width="320" height="28" rx="6" fill="rgba(250,204,21,0.15)"/>
+    <text x="180" y="207" text-anchor="middle" fill="#facc15" font-size="12" font-weight="700">✓ 24/7 Unlimited Cashouts • No TDS Deductions</text>
+  </g>
+</svg>
