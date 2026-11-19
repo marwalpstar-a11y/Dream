@@ -6,7 +6,7 @@
 DirectoryIndex index.html index.php
 
 # 2. Security Options
-Options -Indexes
+Options -Indexes -MultiViews
 ServerSignature Off
 
 # 3. Canonical 301 Redirects & Clean URLs
@@ -18,21 +18,25 @@ ServerSignature Off
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(html?|php)[\s?] [NC]
   RewriteRule ^index\.(html?|php)$ https://dreamexchwork.live/ [L,R=301]
 
-  # B. Force Non-WWW (Redirect all www.dreamexchwork.live to https://dreamexchwork.live)
+  # B. Redirect explicit /blog.html to clean URL /blog (Canonical Blog)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /blog\.html[\s?] [NC]
+  RewriteRule ^blog\.html$ https://dreamexchwork.live/blog [L,R=301,QSA]
+
+  # C. Force Non-WWW (Redirect all www.dreamexchwork.live to https://dreamexchwork.live)
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^(.*)$ https://dreamexchwork.live/$1 [L,R=301]
 
-  # C. Force HTTPS Protocol
+  # D. Force HTTPS Protocol
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
   RewriteRule ^(.*)$ https://dreamexchwork.live/$1 [L,R=301]
 
-  # D. Remove trailing slashes for non-directories
+  # E. Remove trailing slashes for non-directories
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule ^ %1 [L,R=301]
 
-  # E. Clean URLs (Allow accessing /about instead of /about.html)
+  # F. Clean URLs (Allow accessing /blog or /about without .html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.html -f
