@@ -9,16 +9,30 @@ DirectoryIndex index.html index.php
 Options -Indexes
 ServerSignature Off
 
-# 3. Clean URLs (Allow accessing /about instead of /about.html)
+# 3. Canonical 301 Redirects & Clean URLs
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Redirect trailing slashes if not a folder
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)/$ /$1 [L,R=301]
+  # A. Redirect explicit /index.html and /index.php to root / (Canonical Home)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(html?|php)[\s?] [NC]
+  RewriteRule ^index\.(html?|php)$ https://dreamexchwork.live/ [L,R=301]
 
-  # If file exists as .html, serve it
+  # B. Force Non-WWW (Redirect all www.dreamexchwork.live to https://dreamexchwork.live)
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^(.*)$ https://dreamexchwork.live/$1 [L,R=301]
+
+  # C. Force HTTPS Protocol
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://dreamexchwork.live/$1 [L,R=301]
+
+  # D. Remove trailing slashes for non-directories
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} (.+)/$
+  RewriteRule ^ %1 [L,R=301]
+
+  # E. Clean URLs (Allow accessing /about instead of /about.html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.html -f
