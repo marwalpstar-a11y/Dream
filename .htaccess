@@ -14,8 +14,6 @@ ServerSignature Off
   RewriteEngine On
   RewriteBase /
 
-  RewriteRule ^test-apache-check$ https://dreamexchwork.live/proven-apache [R=302,L]
-
   # A. Redirect explicit /index.html and /index.php to root / (Canonical Home)
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(html?|php)[\s?] [NC]
   RewriteRule ^index\.(html?|php)$ https://dreamexchwork.live/ [L,R=301]
