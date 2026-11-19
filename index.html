@@ -27,10 +27,18 @@
   <!-- Google Fonts: Editorial Serif + Modern Athletic Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Preload Critical Hero Image for LCP -->
+  <link rel="preload" as="image" href="assets/images/hero_qyoudf.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Google Fonts: Non-render-blocking with font-display: swap -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  </noscript>
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/main.css?v=2.4.0">
+  <link rel="stylesheet" href="assets/css/main.min.css?v=2.5.0">
 </head>
 <body>
 
@@ -52,7 +60,7 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="site-logo">
-        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 40px; width: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">
+        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="40" height="40" decoding="async" style="height: 40px; width: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">
         <div class="site-logo-fallback">
           <span class="site-logo-title">DREAMEXCH24</span>
           <span class="site-logo-tagline">BETTING ID PROVIDER</span>
@@ -83,7 +91,7 @@
   <aside class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
       <div class="site-logo">
-        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 36px; width: 36px; border-radius: 8px; object-fit: cover;">
+        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="36" height="36" decoding="async" style="height: 36px; width: 36px; border-radius: 8px; object-fit: cover;">
         <span class="site-logo-title" style="margin-left: 8px;">DREAMEXCH24</span>
       </div>
       <button class="drawer-close" id="drawerCloseBtn" aria-label="Close Navigation">&times;</button>
@@ -161,7 +169,10 @@
         <!-- Hero Cricket Exchange Visual Showcase -->
         <div class="hero-visual-card">
           <div class="hero-visual-wrapper">
-            <img src="assets/images/hero_qyoudf.png" alt="DREAMEXCH24 Live Cricket Exchange" class="hero-visual-image" onerror="this.src='https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1200&auto=format&fit=crop&q=80';">
+            <picture>
+              <source srcset="assets/images/hero_qyoudf.webp" type="image/webp">
+              <img src="assets/images/hero_qyoudf.png" alt="DREAMEXCH24 Live Cricket Exchange" class="hero-visual-image" width="1200" height="509" fetchpriority="high" decoding="async">
+            </picture>
             <div class="hero-visual-overlay"></div>
           </div>
         </div>
@@ -340,7 +351,10 @@
           <!-- Right Column: Visual Infographic from Reference Image -->
           <div class="why-dreamexch-visual">
             <div class="infographic-wrapper">
-              <img src="assets/images/why-dreamexch24.jpg" alt="How Cricket ID Providers Actually Work - Dreamexch24" class="infographic-img">
+              <picture>
+                <source srcset="assets/images/why-dreamexch24.webp" type="image/webp">
+                <img src="assets/images/why-dreamexch24.jpg" alt="How Cricket ID Providers Actually Work - Dreamexch24" class="infographic-img" width="1024" height="481" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
 
@@ -576,7 +590,10 @@
         <article class="blog-card">
           <div class="blog-card-media">
             <span class="blog-badge blog-badge-cricket blog-card-badge-pos">Cricket ID Guide</span>
-            <img src="assets/images/section3-reference.jpg" alt="How to Get Verified Online Cricket ID in India">
+            <picture>
+              <source srcset="assets/images/section3-reference.webp" type="image/webp">
+              <img src="assets/images/section3-reference.jpg" alt="How to Get Verified Online Cricket ID in India" width="1024" height="522" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="blog-card-body">
             <h3 class="blog-card-title">
@@ -599,7 +616,10 @@
         <article class="blog-card">
           <div class="blog-card-media">
             <span class="blog-badge blog-badge-ipl blog-card-badge-pos">IPL 2026 Special</span>
-            <img src="assets/images/hero_qyoudf.png" alt="IPL 2026 Pitch Reports and Session Odds">
+            <picture>
+              <source srcset="assets/images/hero_qyoudf.webp" type="image/webp">
+              <img src="assets/images/hero_qyoudf.png" alt="IPL 2026 Pitch Reports and Session Odds" width="1200" height="509" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="blog-card-body">
             <h3 class="blog-card-title">
@@ -622,7 +642,10 @@
         <article class="blog-card">
           <div class="blog-card-media">
             <span class="blog-badge blog-badge-guide blog-card-badge-pos">Smart Wagering</span>
-            <img src="assets/images/cricket_ar4s1o.png" alt="Self-Deposit Cricket ID vs Traditional Bookie">
+            <picture>
+              <source srcset="assets/images/cricket_ar4s1o.webp" type="image/webp">
+              <img src="assets/images/cricket_ar4s1o.png" alt="Self-Deposit Cricket ID vs Traditional Bookie" width="768" height="753" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="blog-card-body">
             <h3 class="blog-card-title">
@@ -821,7 +844,7 @@
         <!-- Brand Info -->
         <div class="footer-brand">
           <div class="site-logo">
-            <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 38px; width: 38px; border-radius: 8px; object-fit: cover;">
+            <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="38" height="38" loading="lazy" decoding="async" style="height: 38px; width: 38px; border-radius: 8px; object-fit: cover;">
             <span class="site-logo-title" style="margin-left: 8px;">DREAMEXCH24</span>
           </div>
           <p>India's #1 verified Betting ID provider since 2023. Fast 5-minute activation for Cricket ID, Casino ID, Sports Exchange ID, and Self Deposit ID with 24/7 human support.</p>

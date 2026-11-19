@@ -31,10 +31,18 @@
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Preload LCP Image for Blog -->
+  <link rel="preload" as="image" href="assets/images/blog/blog-1.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Google Fonts: Non-render-blocking with font-display: swap -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/main.css?v=2.5.0">
+  <link rel="stylesheet" href="assets/css/main.min.css?v=2.5.0">
 
   <style>
     /* Premium Sports Intelligence Hub Styles */
@@ -646,7 +654,7 @@
         
         <!-- Brand Logo -->
         <a href="index.html" class="site-logo">
-          <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 40px; width: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">
+          <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="40" height="40" decoding="async" style="height: 40px; width: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">
           <div class="site-logo-fallback">
             <span class="site-logo-title">DREAMEXCH24</span>
             <span class="site-logo-tagline">BETTING ID PROVIDER</span>
@@ -677,7 +685,7 @@
   <aside class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
       <div class="site-logo">
-        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 36px; width: 36px; border-radius: 8px;">
+        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="36" height="36" decoding="async" style="height: 36px; width: 36px; border-radius: 8px;">
         <span class="site-logo-title" style="margin-left: 8px;">DREAMEXCH24</span>
       </div>
       <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
@@ -749,7 +757,10 @@
     <div class="container">
       <div class="spotlight-card" id="spotlightCard" data-category="cricket" data-keywords="how to get verified online cricket id india lotus365 skyexchange upi deposit whatsapp 5 minutes">
         <div class="spotlight-media">
-          <img src="assets/images/blog/blog-1.jpg" alt="How to Get a Verified Online Cricket ID in India 2026 Guide Master Banner" loading="eager">
+          <picture>
+            <source srcset="assets/images/blog/blog-1.webp" type="image/webp">
+            <img src="assets/images/blog/blog-1.jpg" alt="How to Get a Verified Online Cricket ID in India 2026 Guide Master Banner" width="1200" height="693" fetchpriority="high" loading="eager" decoding="async">
+          </picture>
         </div>
         <div class="spotlight-content">
           <span class="spotlight-badge">🔥 Complete 4,000-Word Master Pillar Guide</span>
@@ -788,7 +799,10 @@
             <article class="hub-article-card" data-category="cricket" data-keywords="top 5 trusted online cricket id providers india comparison lotus365 skyexchange payout speed">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-cricket">Cricket ID</span>
-                <img src="assets/images/blog/blog-2.jpg" alt="Top 5 Most Trusted Online Cricket ID Providers in India (2026 Comparison)" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-2.webp" type="image/webp">
+            <img src="assets/images/blog/blog-2.jpg" alt="Top 5 Most Trusted Online Cricket ID Providers in India (2026 Comparison)" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 15 min read</span></div>
@@ -807,7 +821,10 @@
             <article class="hub-article-card" data-category="cricket" data-keywords="cricket id whatsapp under 5 minutes zero waiting time instant onboarding number">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-cricket">Cricket ID</span>
-                <img src="assets/images/blog/blog-3.jpg" alt="How to Get a Cricket ID on WhatsApp in Under 5 Minutes" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-3.webp" type="image/webp">
+            <img src="assets/images/blog/blog-3.jpg" alt="How to Get a Cricket ID on WhatsApp in Under 5 Minutes" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 14 min read</span></div>
@@ -826,7 +843,10 @@
             <article class="hub-article-card" data-category="cricket" data-keywords="cricket demo id test platform features before deposit free account odds">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-cricket">Cricket ID</span>
-                <img src="assets/images/blog/blog-4.jpg" alt="Cricket Demo ID: How to Test Platform Features Before Depositing Real Money" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-4.webp" type="image/webp">
+            <img src="assets/images/blog/blog-4.jpg" alt="Cricket Demo ID: How to Test Platform Features Before Depositing Real Money" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 13 min read</span></div>
@@ -845,7 +865,10 @@
             <article class="hub-article-card" data-category="platform" data-keywords="lotus365 id kaise banaye registration login guide live match streaming">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-platform">Platform Review</span>
-                <img src="assets/images/blog/blog-5.jpg" alt="Lotus365 ID Kaise Banaye: Official Registration & Login Guide" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-5.webp" type="image/webp">
+            <img src="assets/images/blog/blog-5.jpg" alt="Lotus365 ID Kaise Banaye: Official Registration & Login Guide" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 16 min read</span></div>
@@ -864,7 +887,10 @@
             <article class="hub-article-card" data-category="platform" data-keywords="skyexchange id provider india features minimum deposit instant payouts back lay">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-platform">Platform Review</span>
-                <img src="assets/images/blog/blog-6.jpg" alt="SkyExchange ID Provider in India Features & Payouts" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-6.webp" type="image/webp">
+            <img src="assets/images/blog/blog-6.jpg" alt="SkyExchange ID Provider in India Features & Payouts" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 15 min read</span></div>
@@ -883,7 +909,10 @@
             <article class="hub-article-card" data-category="platform" data-keywords="tigerexchange vs diamond exchange which platform best odds session app">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-platform">Platform Review</span>
-                <img src="assets/images/blog/blog-7.jpg" alt="TigerExchange vs Diamond Exchange Comparison" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-7.webp" type="image/webp">
+            <img src="assets/images/blog/blog-7.jpg" alt="TigerExchange vs Diamond Exchange Comparison" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 15 min read</span></div>
@@ -902,7 +931,10 @@
             <article class="hub-article-card" data-category="platform" data-keywords="laserbook247 world777 master id high roller limits features vip">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-platform">Platform Review</span>
-                <img src="assets/images/blog/blog-8.jpg" alt="LaserBook247 vs World777 High-Roller Master ID" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-8.webp" type="image/webp">
+            <img src="assets/images/blog/blog-8.jpg" alt="LaserBook247 vs World777 High-Roller Master ID" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 14 min read</span></div>
@@ -921,7 +953,10 @@
             <article class="hub-article-card" data-category="platform" data-keywords="self deposit cricket id upi phonepe gpay paytm safely instant banking">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-platform">Banking &amp; UPI</span>
-                <img src="assets/images/blog/blog-9.jpg" alt="Self-Deposit Cricket ID via UPI PhonePe GPay" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-9.webp" type="image/webp">
+            <img src="assets/images/blog/blog-9.jpg" alt="Self-Deposit Cricket ID via UPI PhonePe GPay" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 14 min read</span></div>
@@ -940,7 +975,10 @@
             <article class="hub-article-card" data-category="platform" data-keywords="instant withdrawal cricket id 15 minute payout proof limits banking rules">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-platform">Banking &amp; UPI</span>
-                <img src="assets/images/blog/blog-10.jpg" alt="Instant Withdrawal Cricket ID 15-Minute Payout Proof" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-10.webp" type="image/webp">
+            <img src="assets/images/blog/blog-10.jpg" alt="Instant Withdrawal Cricket ID 15-Minute Payout Proof" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 15 min read</span></div>
@@ -959,7 +997,10 @@
             <article class="hub-article-card" data-category="cricket" data-keywords="minimum deposit cricket id 100 rupees starting guide low budget beginners">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-cricket">Cricket ID</span>
-                <img src="assets/images/blog/blog-11.jpg" alt="Minimum Deposit Cricket ID in India Start with 100 Rupees" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-11.webp" type="image/webp">
+            <img src="assets/images/blog/blog-11.jpg" alt="Minimum Deposit Cricket ID in India Start with 100 Rupees" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 13 min read</span></div>
@@ -978,7 +1019,10 @@
             <article class="hub-article-card" data-category="security" data-keywords="cricket id withdrawal rules taxes banking safety india legal p2p">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-security">Security &amp; Safety</span>
-                <img src="assets/images/blog/blog-12.jpg" alt="Cricket ID Withdrawal Rules Taxes & Banking Safety in India" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-12.webp" type="image/webp">
+            <img src="assets/images/blog/blog-12.jpg" alt="Cricket ID Withdrawal Rules Taxes & Banking Safety in India" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 16 min read</span></div>
@@ -997,7 +1041,10 @@
             <article class="hub-article-card" data-category="security" data-keywords="fake cricket id scams telegram identify protect capital fraud brokers">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-security">Security &amp; Safety</span>
-                <img src="assets/images/blog/blog-13.jpg" alt="Fake Cricket ID Scams on Telegram How to Identify" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-13.webp" type="image/webp">
+            <img src="assets/images/blog/blog-13.jpg" alt="Fake Cricket ID Scams on Telegram How to Identify" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 17 min read</span></div>
@@ -1016,7 +1063,10 @@
             <article class="hub-article-card" data-category="security" data-keywords="is online cricket id safe legal india regulatory blueprint offshore license">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-security">Security &amp; Safety</span>
-                <img src="assets/images/blog/blog-14.jpg" alt="Is Online Cricket ID Safe & Legal in India" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-14.webp" type="image/webp">
+            <img src="assets/images/blog/blog-14.jpg" alt="Is Online Cricket ID Safe & Legal in India" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 17 min read</span></div>
@@ -1035,7 +1085,10 @@
             <article class="hub-article-card" data-category="security" data-keywords="blocked cricket id stuck funds recovery guide unfreeze account credentials">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-security">Security &amp; Safety</span>
-                <img src="assets/images/blog/blog-15.jpg" alt="Blocked Cricket ID Recovery & Stuck Funds Restoration" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-15.webp" type="image/webp">
+            <img src="assets/images/blog/blog-15.jpg" alt="Blocked Cricket ID Recovery & Stuck Funds Restoration" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 15 min read</span></div>
@@ -1054,7 +1107,10 @@
             <article class="hub-article-card" data-category="ipl" data-keywords="ipl 2026 cricket betting id tournament odds matchday tips liquidity">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-ipl">IPL 2026</span>
-                <img src="assets/images/blog/blog-16.jpg" alt="IPL 2026 Cricket Betting ID Tournament Guide" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-16.webp" type="image/webp">
+            <img src="assets/images/blog/blog-16.jpg" alt="IPL 2026 Cricket Betting ID Tournament Guide" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 16 min read</span></div>
@@ -1073,7 +1129,10 @@
             <article class="hub-article-card" data-category="ipl" data-keywords="cricket session betting fancy rates explained how to read win powerplay lambi">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-ipl">IPL 2026</span>
-                <img src="assets/images/blog/blog-17.jpg" alt="Cricket Session Betting & Fancy Rates Explained" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-17.webp" type="image/webp">
+            <img src="assets/images/blog/blog-17.jpg" alt="Cricket Session Betting & Fancy Rates Explained" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 16 min read</span></div>
@@ -1092,7 +1151,10 @@
             <article class="hub-article-card" data-category="ipl" data-keywords="cricket exchange back and lay strategy trading odds green book bookmaking">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-ipl">IPL 2026</span>
-                <img src="assets/images/blog/blog-18.jpg" alt="Cricket Exchange Back and Lay Strategy Trading" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-18.webp" type="image/webp">
+            <img src="assets/images/blog/blog-18.jpg" alt="Cricket Exchange Back and Lay Strategy Trading" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 17 min read</span></div>
@@ -1111,7 +1173,10 @@
             <article class="hub-article-card" data-category="cricket" data-keywords="india vs pakistan matchday cricket id server latency high stakes rush">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-cricket">Cricket ID</span>
-                <img src="assets/images/blog/blog-19.jpg" alt="India vs Pakistan Matchday Cricket ID Server Latency" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-19.webp" type="image/webp">
+            <img src="assets/images/blog/blog-19.jpg" alt="India vs Pakistan Matchday Cricket ID Server Latency" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 15 min read</span></div>
@@ -1130,7 +1195,10 @@
             <article class="hub-article-card" data-category="ipl" data-keywords="ipl pitch reports weather data accurate session betting red soil dew factor">
               <div class="hub-card-thumb">
                 <span class="hub-category-tag tag-ipl">IPL 2026</span>
-                <img src="assets/images/blog/blog-20.jpg" alt="IPL Pitch Reports & Weather Data for Accurate Session Betting" loading="lazy">
+                <picture>
+            <source srcset="assets/images/blog/blog-20.webp" type="image/webp">
+            <img src="assets/images/blog/blog-20.jpg" alt="IPL Pitch Reports & Weather Data for Accurate Session Betting" width="1200" height="800" loading="lazy" decoding="async">
+          </picture>
               </div>
               <div class="hub-card-body">
                 <div class="hub-card-meta"><span>📅 IPL 2026 Edition</span> &bull; <span>⏱️ 16 min read</span></div>
@@ -1256,7 +1324,7 @@
         <!-- Brand Info -->
         <div class="footer-col footer-col-brand">
           <a href="index.html" class="site-logo">
-            <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 38px; width: 38px; border-radius: 8px; object-fit: cover;">
+            <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="38" height="38" loading="lazy" decoding="async" style="height: 38px; width: 38px; border-radius: 8px; object-fit: cover;">
             <span class="site-logo-title" style="margin-left: 8px;">DREAMEXCH24</span>
           </a>
           <p class="footer-brand-desc">

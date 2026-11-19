@@ -41,6 +41,11 @@ ServerSignature Off
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L,QSA]
+
+  # G. Auto-serve WebP if supported by client browser and .webp file exists on disk
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+  RewriteRule ^(.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=accept:1,L]
 </IfModule>
 
 # 4. MIME Types & UTF-8 Character Encoding
@@ -53,17 +58,24 @@ AddDefaultCharset UTF-8
   AddType application/json .json
   AddType image/svg+xml .svg
   AddType image/webp .webp
+  AddType image/x-icon .ico
   AddType font/woff .woff
   AddType font/woff2 .woff2
 </IfModule>
 
-# 5. Gzip / Brotli Compression
+# 5. Gzip & Brotli Compression
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/x-javascript text/javascript application/json image/svg+xml image/x-icon font/woff font/woff2 application/vnd.ms-fontobject
+</IfModule>
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css application/javascript application/x-javascript text/javascript application/json image/svg+xml image/x-icon font/woff font/woff2 application/vnd.ms-fontobject
 </IfModule>
 
 # 6. Cache Control & Fresh Asset Delivery
 <IfModule mod_headers.c>
+  # Vary header for WebP CDN caching
+  Header append Vary Accept env=REDIRECT_accept
+
   # HTML and XML sitemaps are never cached - always check server for freshest layout & deployment
   <FilesMatch "\.(html|htm|php|xml|txt)$">
     Header set Cache-Control "no-cache, no-store, must-revalidate"
@@ -71,9 +83,14 @@ AddDefaultCharset UTF-8
     Header set Expires "0"
   </FilesMatch>
 
-  # CSS and JS have revalidation so new versions are fetched immediately upon deploy
+  # CSS and JS asset caching with revalidation
   <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "public, max-age=3600, must-revalidate"
+    Header set Cache-Control "public, max-age=604800, must-revalidate"
+  </FilesMatch>
+
+  # Static images, icons, and web fonts: 1 year immutable browser caching
+  <FilesMatch "\.(ico|jpe?g|png|gif|webp|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>
 
@@ -83,11 +100,13 @@ AddDefaultCharset UTF-8
   ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType text/xml "access plus 0 seconds"
   ExpiresByType application/xml "access plus 0 seconds"
-  ExpiresByType text/css "access plus 1 hour"
-  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>

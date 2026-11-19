@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -91,10 +91,14 @@
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/main.css?v=2.4.0">
+  <link rel="stylesheet" href="assets/css/main.min.css?v=2.5.0">
 
   <style>
     /* Article Specific Authority Styles */
@@ -300,6 +304,8 @@
       color: #facc15;
     }
   </style>
+  <!-- Preload Blog Hero WebP -->
+  <link rel="preload" as="image" href="assets/images/blog/blog-1.webp" type="image/webp" fetchpriority="high">
 </head>
 <body>
 
@@ -321,7 +327,7 @@
         
         <!-- Brand Logo -->
         <a href="index.html" class="site-logo">
-          <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 40px; width: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">
+          <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="40" height="40" decoding="async" style="height: 40px; width: 40px; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">
           <div class="site-logo-fallback">
             <span class="site-logo-title">DREAMEXCH24</span>
             <span class="site-logo-tagline">BETTING ID PROVIDER</span>
@@ -352,7 +358,7 @@
   <aside class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
       <div class="site-logo">
-        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 36px; width: 36px; border-radius: 8px;">
+        <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="36" height="36" decoding="async" style="height: 36px; width: 36px; border-radius: 8px;">
         <span class="site-logo-title" style="margin-left: 8px;">DREAMEXCH24</span>
       </div>
       <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
@@ -402,7 +408,10 @@
 
     <!-- HD Hero Image -->
     <div class="article-hero-banner">
-      <img src="assets/images/blog/blog-1.jpg" alt="How to Get a Verified Online Cricket ID in India 2026 Guide HD Banner" loading="lazy">
+      <picture>
+          <source srcset="assets/images/blog/blog-1.webp" type="image/webp">
+          <img src="assets/images/blog/blog-1.jpg" alt="How to Get a Verified Online Cricket ID in India 2026 Guide HD Banner" width="1200" height="800" fetchpriority="high" loading="eager" decoding="async">
+        </picture>
     </div>
 
     <!-- Article Content -->
@@ -769,7 +778,7 @@
         <!-- Brand Info -->
         <div class="footer-brand">
           <div class="site-logo">
-            <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" style="height: 38px; width: 38px; border-radius: 8px; object-fit: cover;">
+            <img src="assets/images/favicon.png" alt="DREAMEXCH24 Logo" width="38" height="38" loading="lazy" decoding="async" style="height: 38px; width: 38px; border-radius: 8px; object-fit: cover;">
             <span class="site-logo-title" style="margin-left: 8px;">DREAMEXCH24</span>
           </div>
           <p>India's #1 verified Betting ID provider since 2023. Fast 5-minute activation for Cricket ID, Casino ID, Sports Exchange ID, and Self Deposit ID with 24/7 human support.</p>
@@ -898,7 +907,7 @@
 
   <!-- Scripts -->
   <script src="assets/js/config.js?v=2.4.0"></script>
-  <script src="assets/js/app.js?v=2.4.0"></script>
+  <script src="assets/js/config.js?v=2.5.0" defer></script>`n  <script src="assets/js/app.min.js?v=2.5.0" defer></script>
 </body>
 </html>
 
