@@ -1,0 +1,15 @@
+# ==============================================================================
+# Robots.txt for DREAMEXCH24
+# Website: https://dreamexchwork.live/
+# ==============================================================================
+
+User-agent: *
+Allow: /
+
+# Disallow private build tools or internal directories
+Disallow: /tools/
+Disallow: /scratch/
+Disallow: /.git/
+
+# XML Sitemap Location
+Sitemap: https://dreamexchwork.live/sitemap.xml

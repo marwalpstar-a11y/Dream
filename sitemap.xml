@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://dreamexchwork.live/</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/why-dreamexch24.jpg</image:loc>
+      <image:title>DreamExch24 - India's Most Trusted Betting ID Provider</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/betting-ids-types.jpg</image:loc>
+      <image:title>Types of Betting IDs Available in India</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/favicon.png</image:loc>
+      <image:title>DreamExch24 Official Logo</image:title>
+    </image:image>
+  </url>
+
+  <!-- Sports Blog & News Updates -->
+  <url>
+    <loc>https://dreamexchwork.live/blog.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/section3-reference.jpg</image:loc>
+      <image:title>India vs Australia Test Series &amp; Session Trends</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/football_exqffd.png</image:loc>
+      <image:title>UEFA Champions League Quarter-Finals High-Press Tactics</image:title>
+    </image:image>
+  </url>
+
+  <!-- Cricket ID Page -->
+  <url>
+    <loc>https://dreamexchwork.live/cricket-id.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/cricket_ar4s1o.png</image:loc>
+      <image:title>Verified Cricket ID Verification Desk</image:title>
+    </image:image>
+  </url>
+
+  <!-- Football ID Page -->
+  <url>
+    <loc>https://dreamexchwork.live/football-id.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/football_exqffd.png</image:loc>
+      <image:title>Football Exchange ID Liaison Desk</image:title>
+    </image:image>
+  </url>
+
+  <!-- T20 ID Page -->
+  <url>
+    <loc>https://dreamexchwork.live/t20-id.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/hero_qyoudf.png</image:loc>
+      <image:title>T20 Franchise Tournament Betting ID Setup</image:title>
+    </image:image>
+  </url>
+
+  <!-- Services & Exchange Overview -->
+  <url>
+    <loc>https://dreamexchwork.live/services.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Shop Page -->
+  <url>
+    <loc>https://dreamexchwork.live/shop.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://dreamexchwork.live/contact.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About DREAMEXCH24 -->
+  <url>
+    <loc>https://dreamexchwork.live/about.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://dreamexchwork.live/assets/images/about_upk10g.png</image:loc>
+      <image:title>About DreamExch24 Liaison &amp; Onboarding</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product Detail Page -->
+  <url>
+    <loc>https://dreamexchwork.live/product-detail.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Responsible Gaming & Compliance -->
+  <url>
+    <loc>https://dreamexchwork.live/responsible-gaming.html</loc>
+    <lastmod>2026-11-19T11:30:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
