@@ -13,3 +13,7 @@ Disallow: /.git/
 
 # XML Sitemap Location
 Sitemap: https://dreamexchwork.live/sitemap.xml
+
+# LLMS context files for AI search agents & LLMs
+# Location: https://dreamexchwork.live/llms.txt
+# Full: https://dreamexchwork.live/llms-full.txt
